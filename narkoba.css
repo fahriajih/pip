@@ -1,0 +1,185 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #2e2e38, #4b4b5e);
+  color: #ddd;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  animation: fadeInBackground 2s ease-out;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@keyframes fadeInBackground {
+  0% {
+      background: #000;
+  }
+  100% {
+      background: linear-gradient(135deg, #2e2e38, #4b4b5e);
+  }
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  color: blue;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  animation: slideIn 1.5s ease-out;
+}
+
+@keyframes slideIn {
+  0% {
+      transform: translateY(100px);
+      opacity: 0;
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+header, footer {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1rem;
+  border: 3px solid #f8a5c2;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.4);
+  animation: textGlow 2s ease-in-out infinite alternate;
+}
+
+h1:hover, h2:hover, h3:hover, h4:hover {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes textGlow {
+  0% {
+      color: rgba(255, 255, 255, 0.4);
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+      color: #ff00ff;
+      text-shadow: 0 0 20px rgba(255, 0, 255, 1);
+  }
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  animation: fadeIn 2s ease-out;
+}
+
+nav ul li {
+  margin: 0 15px;
+  position: relative;
+}
+
+nav ul li a, section a, a {
+  text-decoration: none;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+  transition: color 0.3s ease;
+  animation: bounceIn 1.5s ease-out;
+}
+
+nav ul li a:hover, section a:hover, a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes bounceIn {
+  0% {
+      transform: translateY(-30px);
+      opacity: 0;
+  }
+  60% {
+      transform: translateY(10px);
+  }
+  100% {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+section {
+  width: 80%;
+  margin: 40px auto;
+  text-align: left;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  border: 3px solid #f8a5c2;
+}
+
+p, ul li {
+  color: rgba(255, 255, 255, 0.3);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+  opacity: 0;
+  animation: fadeInText 2s forwards 0.5s;
+}
+
+p:hover, ul li:hover {
+  color: #fff;
+  text-shadow: 0 4px 10px rgba(255, 255, 255, 0.8);
+}
+
+@keyframes fadeInText {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  line-height: 1.5;
+  padding-left: 20px;
+  color: #AA5486;
+}
+
+ul li b {
+  font-weight: bold;
+  color: #f8a5c2;
+}
+
+img, .office-image {
+  max-width: 100%;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 0, 150, 0.8);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover, .office-image:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(255, 20, 147, 1);
+}
